@@ -1,11 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import { IconNode, Github, Mail, Linkedin, Hexagon, Eye, Signal } from "lucide-react";
-import { allProjects } from "contentlayer/generated";
+import { Github, Signal } from "lucide-react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-import { Article } from "./article";
-import { Redis } from "@upstash/redis";
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
@@ -109,6 +106,37 @@ export default async function ProjectsPage() {
                   </h2>
                   <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                     Proyecto de pagina web creado con react.js para empresa de perforacion de suelos
+                  </p>
+                  <br></br>
+                  <div className="absolute bottom-4 md:bottom-8">
+                    <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+                      Read more <span aria-hidden="true">&rarr;</span>
+                    </p>
+                  </div>
+                </article>
+              </Link>
+            </Card>
+            <Card>
+              <Link href={"https://github.com/lugomez1403/nextjs-portfolio"} target="_blank">
+                <article className="relative w-full h-full p-4 md:p-8">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="text-xs text-zinc-100">
+                      
+                    </div>
+                    <span className="flex items-center gap-1 text-xs text-zinc-500">
+                    <Github></Github>
+                      
+                    </span>
+                  </div>
+
+                  <h2
+                    id="featured-post"
+                    className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                  >
+                    Mi portafolio
+                  </h2>
+                  <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                    Este portafolio creado, con  Next.js, Tailwind CSS, Contentlayer en Vercel
                   </p>
                   <br></br>
                   <div className="absolute bottom-4 md:bottom-8">
